@@ -20,10 +20,8 @@ cask "sorap" do
 
   # Sorap is not notarized, so Gatekeeper would block the first launch.
   # Installing through this tap is the user's explicit choice to trust it.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Sorap.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Sorap.app"]
   end
 
   zap trash: [
