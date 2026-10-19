@@ -1,6 +1,6 @@
 cask "sorap" do
-  version "0.1.0"
-  sha256 "ed071a180dfc92589ecf97c2f244f4a33f153006becc711096df55f41fa10500"
+  version "0.2.0"
+  sha256 "c6ae6a426bb302fa1beb48fae5920a9ac987be82350aa7a3dcf680e0241e280d"
 
   url "https://github.com/colamong/sorap/releases/download/v#{version}/Sorap-#{version}.zip"
   name "Sorap"
